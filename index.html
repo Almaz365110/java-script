@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Локалдык мессенджер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>💬 My Messenger</h1>
+        <p>Жеке локалдык чат симулятору</p>
+    </header>
+
+    <main class="messenger">
+
+        <aside class="sidebar">
+            <h2>Контакттар</h2>
+
+            <div class="add-contact">
+                <input type="text" id="contactName"
+                       placeholder="Контакттын аты">
+
+                <button id="addContact">+ Кошуу</button>
+            </div>
+
+            <div id="contactsList"></div>
+        </aside>
+
+        <section class="chat">
+
+            <div class="chat-header">
+                <div>
+                    <h2 id="chatName">Контакт тандаңыз</h2>
+                    <p id="chatStatus">Чат баштоо үчүн контакт тандаңыз</p>
+                </div>
+            </div>
+
+            <div id="messages" class="messages">
+                <div class="welcome">
+                    <h2>👋 Кош келиңиз!</h2>
+                    <p>Сүйлөшүүнү баштоо үчүн контакт тандаңыз.</p>
+                </div>
+            </div>
+
+            <form id="messageForm" class="message-form">
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Билдирүү жазыңыз..."
+                    autocomplete="off"
+                    disabled
+                >
+
+                <button type="submit" id="sendButton" disabled>
+                    Жөнөтүү ➤
+                </button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <section class="history">
+        <h2>📁 Чат жөнүндө</h2>
+        <p>Бардык билдирүүлөр браузердин LocalStorage эс тутумунда сакталат.</p>
+        <button id="clearHistory">Тарыхты тазалоо</button>
+    </section>
+
+    <footer>
+        <p>© 2026 My Messenger | Даярдаган: Бекполотов Алмаз</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+ 
